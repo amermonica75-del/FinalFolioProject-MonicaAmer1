@@ -105,4 +105,18 @@ router.put('/change-password', protect, async (req, res) => {
   }
 });
 
+// ==============================================================
+// ✅ TEST ROUTE - ADDED for Render deployment verification
+// ==============================================================
+// This route helps you test if the auth routes are properly loaded
+// Visit: https://thefolio-api.onrender.com/api/auth/test
+// ==============================================================
+router.get('/test', (req, res) => {
+  res.status(200).json({ 
+    message: 'Auth routes are working!', 
+    routes: ['POST /register', 'POST /login', 'GET /me', 'PUT /profile', 'PUT /change-password'],
+    timestamp: new Date().toISOString()
+  });
+});
+
 module.exports = router;
