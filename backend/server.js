@@ -32,6 +32,17 @@ app.use(express.urlencoded({ extended: true }));
 // e.g. http://localhost:5000/uploads/my-image.jpg
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+//──Health Check for Render (ADDED - do not remove)───────────
+// This tells Render that your server is alive and ready
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Server is running' });
+});
+
+// Optional: Root route to test if backend is accessible
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'TheFolio API is running' });
+});
+
 //──Routes────────────────────────────────────────────────────
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
