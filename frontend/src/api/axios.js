@@ -1,8 +1,11 @@
 // frontend/src/api/axios.js
 import axios from 'axios';
 
+// ✅ ADDED: Use environment variable if available, fallback to localhost for development
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: API_URL,  // ← CHANGED: from hardcoded to dynamic
 });
 
 // This interceptor runs before EVERY request.
