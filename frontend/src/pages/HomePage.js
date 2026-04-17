@@ -229,7 +229,7 @@ const HomePage = () => {
                   {post.image && (
                     <div className="post-image">
                       <img
-                        src={`http://localhost:5000/uploads/${post.image}`}
+                        src={`${process.env.REACT_APP_BACKEND_URL}/uploads/${post.image}`}
                         alt={post.title}
                       />
                     </div>

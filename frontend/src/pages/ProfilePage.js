@@ -151,7 +151,7 @@ const ProfilePage = () => {
   };
 
   const picSrc = user?.profilePic
-    ? `http://localhost:5000/uploads/${user.profilePic}`
+    ? `${process.env.REACT_APP_BACKEND_URL}/uploads/${user.profilePic}`
     : `https://ui-avatars.com/api/?background=2E8B57&color=fff&bold=true&size=150&name=${encodeURIComponent(user?.name || 'User')}`;
 
   return (
@@ -555,7 +555,7 @@ const ProfilePage = () => {
                               {post.image && (
                                 <div className="post-image">
                                   <img
-                                    src={`http://localhost:5000/uploads/${post.image}`}
+                                    src={`${process.env.REACT_APP_BACKEND_URL}/uploads/${post.image}`}
                                     alt={post.title}
                                   />
                                 </div>

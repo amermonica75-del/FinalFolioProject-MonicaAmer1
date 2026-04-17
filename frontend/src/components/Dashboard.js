@@ -137,7 +137,7 @@ const Dashboard = () => {
                 <div key={post._id} className="post-card">
                   {post.image && (
                     <img 
-                      src={`http://localhost:5000/uploads/${post.image}`} 
+                      src={`${process.env.REACT_APP_BACKEND_URL}/uploads/${post.image}`} 
                       alt={post.title}
                       className="post-image"
                     />

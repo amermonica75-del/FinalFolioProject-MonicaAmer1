@@ -247,7 +247,7 @@ const AdminPage = () => {
                 <tr key={userItem._id}>
                   <td>
                     <img 
-                      src={userItem.profilePic ? `http://localhost:5000/uploads/${userItem.profilePic}` : `https://ui-avatars.com/api/?background=3CB371&color=fff&size=40&name=${userItem.name}`}
+                      src={userItem.profilePic ? `${process.env.REACT_APP_BACKEND_URL}/uploads/${userItem.profilePic}` : `https://ui-avatars.com/api/?background=3CB371&color=fff&size=40&name=${userItem.name}`}
                       alt={userItem.name}
                       className="avatar-small"
                     />
@@ -313,7 +313,7 @@ const AdminPage = () => {
                   <td>
                     {post.image ? (
                       <img 
-                        src={`http://localhost:5000/uploads/${post.image}`}
+                        src={`${process.env.REACT_APP_BACKEND_URL}/uploads/${post.image}`}
                         alt={post.title}
                         className="post-thumb"
                       />
@@ -365,7 +365,7 @@ const AdminPage = () => {
             <div className="modal-body">
               <div className="user-detail-avatar">
                 <img 
-                  src={selectedItem.profilePic ? `http://localhost:5000/uploads/${selectedItem.profilePic}` : `https://ui-avatars.com/api/?background=3CB371&color=fff&size=100&name=${selectedItem.name}`}
+                  src={selectedItem.profilePic ? `${process.env.REACT_APP_BACKEND_URL}/uploads/${selectedItem.profilePic}` : `https://ui-avatars.com/api/?background=3CB371&color=fff&size=100&name=${selectedItem.name}`}
                   alt={selectedItem.name}
                 />
               </div>
@@ -407,7 +407,7 @@ const AdminPage = () => {
             <div className="modal-body">
               {selectedItem.image && (
                 <div className="post-detail-image">
-                  <img src={`http://localhost:5000/uploads/${selectedItem.image}`} alt={selectedItem.title} />
+                  <img src={`${process.env.REACT_APP_BACKEND_URL}/uploads/${selectedItem.image}`} alt={selectedItem.title} />
                 </div>
               )}
               <div className="detail-item">
