@@ -1,0 +1,162 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+  flex: 1;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode #root {
+  background-color: #121212;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode button {
+  background-color: #1f1f1f;
+  color: #e8e8e8;
+  border-color: #333;
+}
+
+body.dark-mode a {
+  color: #9bdc8f;
+}
+
+body.dark-mode ::placeholder {
+  color: #999;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .nav-menu,
+body.dark-mode .hero-section,
+body.dark-mode .login-hero-section,
+body.dark-mode .register-hero-section,
+body.dark-mode .contact-hero-section,
+body.dark-mode .about-hero-section,
+body.dark-mode .entertainment-hero-section,
+body.dark-mode .profile-hero-section,
+body.dark-mode .create-post-hero-section,
+body.dark-mode .section-header,
+body.dark-mode .container,
+body.dark-mode .card,
+body.dark-mode .post-card,
+body.dark-mode .profile-card,
+body.dark-mode .login-card,
+body.dark-mode .register-card,
+body.dark-mode .create-post-card,
+body.dark-mode .sidebar-card,
+body.dark-mode .info-card,
+body.dark-mode .faq-card,
+body.dark-mode .feature-card,
+body.dark-mode .tip-card,
+body.dark-mode .post-content,
+body.dark-mode .post-body,
+body.dark-mode .comments-section,
+body.dark-mode .footer-main,
+body.dark-mode .footer-grid,
+body.dark-mode .footer-bottom,
+body.dark-mode .premium-footer,
+body.dark-mode .comment-card,
+body.dark-mode .profile-page,
+body.dark-mode .home-page,
+body.dark-mode .about-page,
+body.dark-mode .contact-page,
+body.dark-mode .register-page,
+body.dark-mode .login-page,
+body.dark-mode .entertainment-page,
+body.dark-mode .create-post-page,
+body.dark-mode .edit-post-page,
+body.dark-mode .post-page,
+body.dark-mode .admin-page {
+  background: #121212 !important;
+  color: #eaeaea !important;
+  border-color: #333 !important;
+}
+
+body.dark-mode .btn-primary,
+body.dark-mode .btn-secondary,
+body.dark-mode .btn-submit,
+body.dark-mode .btn-login,
+body.dark-mode .btn-register,
+body.dark-mode .logout-btn,
+body.dark-mode .theme-toggle,
+body.dark-mode .register-btn,
+body.dark-mode .refresh-btn,
+body.dark-mode .view-btn,
+body.dark-mode .edit-btn,
+body.dark-mode .action-btn,
+body.dark-mode .btn-eco,
+body.dark-mode .btn-not-eco,
+body.dark-mode .btn-play-again,
+body.dark-mode .btn-join,
+body.dark-mode .btn-cancel,
+body.dark-mode .btn-save,
+body.dark-mode .btn-register,
+body.dark-mode .btn-primary,
+body.dark-mode .btn-secondary {
+  background-color: #1f1f1f !important;
+  color: #eaeaea !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-secondary:hover,
+body.dark-mode .logout-btn:hover,
+body.dark-mode .theme-toggle:hover,
+body.dark-mode .register-btn:hover {
+  background-color: #2a2a2a !important;
+}

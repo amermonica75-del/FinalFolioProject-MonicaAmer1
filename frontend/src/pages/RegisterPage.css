@@ -1,0 +1,814 @@
+/* frontend/src/pages/RegisterPage.css */
+
+.register-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.register-hero-section {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  background: linear-gradient(135deg, #3CB371 0%, #2F4F4F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.register-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.register-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.register-hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.register-hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat .stat-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.hero-stat .stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* REGISTRATION FORM SECTION */
+.register-form-section {
+  padding: 80px 0;
+  background: #f5f9f7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.register-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Register Card */
+.register-card {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.register-header h2 {
+  font-size: 1.8rem;
+  color: #1e4a3b;
+  margin-bottom: 10px;
+}
+
+.register-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Error Message */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  animation: shake 0.5s ease;
+}
+
+.error-icon {
+  font-size: 1.2rem;
+}
+
+/* Form Styles */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 1.1rem;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #3CB371;
+  box-shadow: 0 0 0 3px rgba(60, 179, 113, 0.1);
+}
+
+.error-input {
+  border-color: #e74c3c !important;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.radio-label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  margin: 10px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox-label a {
+  color: #3CB371;
+  text-decoration: none;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+/* Register Button */
+.btn-register {
+  width: 100%;
+  padding: 14px;
+  background: #3CB371;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-register:hover:not(:disabled) {
+  background: #2c6e4f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(60, 179, 113, 0.3);
+}
+
+.btn-register:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Register Footer */
+.register-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.register-footer p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.login-link {
+  color: #3CB371;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Benefits Sidebar */
+.register-benefits {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.benefits-header h3 {
+  font-size: 1.5rem;
+  color: #1e4a3b;
+  margin-bottom: 10px;
+}
+
+.benefits-header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  min-width: 50px;
+}
+
+.benefit-content h4 {
+  color: #1e4a3b;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.benefit-content p {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* CTA SECTION */
+.register-cta-section {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  color: #1e4a3b;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 30px;
+  background: transparent;
+  color: #3CB371;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid #3CB371;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #3CB371;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .register-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .register-benefits {
+    position: static;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-hero-title {
+    font-size: 2rem;
+  }
+  
+  .register-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-stats {
+    gap: 30px;
+  }
+  
+  .hero-stat .stat-number {
+    font-size: 1.3rem;
+  }
+  
+  .register-card {
+    padding: 30px 20px;
+  }
+  
+  .register-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .register-card {
+    padding: 25px 15px;
+  }
+  
+  .benefits-list {
+    gap: 20px;
+  }
+  
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .benefit-icon {
+    margin: 0 auto;
+  }
+  /* PREMIUM FOOTER STYLES - Add to RegisterPage.css */
+
+.premium-footer {
+  background: linear-gradient(135deg, #0a1f14 0%, #06120c 100%);
+  color: #ffffff;
+  position: relative;
+  margin-top: 0;
+}
+
+.footer-waves {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer-waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.footer-main {
+  padding: 4rem 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Brand Section */
+.footer-brand .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+}
+
+.logo-icon {
+  font-size: 2.2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-brand p {
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  color: #4ade80;
+}
+
+.social-icon:hover {
+  background: #4ade80;
+  color: #0a1f14;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(74, 222, 128, 0.3);
+}
+
+/* Links Sections */
+.footer-links h4, .footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #4ade80;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links h4::after, .footer-contact h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #4ade80, transparent);
+}
+
+.footer-links ul, .footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li, .footer-contact ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links ul li a, .footer-contact ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links ul li a:hover {
+  color: #4ade80;
+  transform: translateX(5px);
+}
+
+.footer-contact ul li {
+  color: #d1d5db;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Newsletter Mini */
+.newsletter-mini {
+  margin-top: 1.5rem;
+}
+
+.newsletter-mini p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-input-group input {
+  flex: 1;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input-group input:focus {
+  outline: none;
+  border-color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.newsletter-input-group input::placeholder {
+  color: #6b7280;
+}
+
+.newsletter-input-group button {
+  padding: 10px 16px;
+  background: #4ade80;
+  border: none;
+  border-radius: 8px;
+  color: #0a1f14;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input-group button:hover {
+  background: #22c55e;
+  transform: translateX(3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(74, 222, 128, 0.2);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #4ade80;
+}
+
+.separator {
+  color: #374151;
+}
+
+/* Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-links h4::after, .footer-contact h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-contact ul li {
+    justify-content: center;
+  }
+  
+  .newsletter-input-group {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    justify-content: center;
+  }
+  
+  .footer-waves {
+    top: -50px;
+  }
+  
+  .footer-waves svg {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .logo-text {
+    font-size: 1.3rem;
+  }
+  
+  .footer-links h4, .footer-contact h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Container class if not already defined in RegisterPage.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+}

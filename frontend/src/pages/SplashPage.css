@@ -1,0 +1,106 @@
+.splash-page {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #214E34 0%, #3CB371 45%, #66CDAA 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: white;
+}
+
+.splash-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1f3a2d;
+  padding: 40px 35px;
+  border-radius: 28px;
+  text-align: center;
+  width: min(460px, 90%);
+  box-shadow: 0 24px 60px rgba(15, 44, 22, 0.2);
+  animation: fadeIn 1.2s ease;
+}
+
+.splash-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 16px;
+}
+
+.splash-emoji {
+  font-size: 2.4rem;
+}
+
+.splash-card h1 {
+  font-size: 2.4rem;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.splash-subtitle {
+  margin-top: 10px;
+  color: #2f5540;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.splash-description,
+.loading-state p {
+  margin: 24px auto 0;
+  color: #3e5f4b;
+  max-width: 340px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  border: 6px solid rgba(60, 179, 113, 0.25);
+  border-top-color: #3cb371;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.splash-card button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2f7f51 0%, #3cb371 100%);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.splash-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(60, 179, 113, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
