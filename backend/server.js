@@ -18,7 +18,12 @@ connectDB(); // Connect to MongoDB
 //──Middleware─────────────────────────────────────────────────
 // Allow React (ports 3000 and 3001) to call this server
 app.use(cors({ 
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'https://finalfolioproject-monicaamer1.vercel.app'], 
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://finalfolioproject-monicaamer1.vercel.app',
+    'https://final-folio-project-monica-amer1-wd.vercel.app'  // ← IDAGDAG ITO!
+  ], 
   credentials: true 
 }));
 
